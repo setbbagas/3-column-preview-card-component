@@ -4,8 +4,8 @@
 /* variables */
 :root {
     /* font family */
-    --ff-paragraph: "Inter", sans-serif;
-    --ff-heading: "Lexend Deca", sans-serif;
+    --ff-paragraph: "Lexend Deca", sans-serif;
+    --ff-heading: "Big Shoulders Display", cursive;
     /* font weight */
     --fw-regular: 400;
     --fw-bold: 700;
@@ -16,7 +16,7 @@
     --clr-neutral-bg: hsl(0, 0%, 95%);
     --clr-neutral-heading: hsl(0, 0%, 95%);
     --clr-neutral-button: hsl(0, 0%, 95%);
-    --clr-neutral-paragraph: hsla(0, 0%, 100, 0.75);
+    --clr-neutral-paragraph: hsla(0, 0%, 100%, 0.75);
 }
 
 /* reset */
@@ -51,4 +51,120 @@ body {
     color: var(--clr-neutral-paragraph);
     /* background */
     background-color: var(--clr-neutral-bg);
+}
+
+.container {
+    width: 800px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.card-container {
+    max-width: 350px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card:nth-child(1) {
+    background-color: var(--clr-secondary-bg);
+    border-radius: 1rem 0 0 1rem;
+}
+.card:nth-child(2) {
+    background-color: var(--clr-primary-ltr-bg);
+}
+.card:nth-child(3) {
+    background-color: var(--clr-primary-bg);
+    border-radius: 0 1rem 1rem 0;
+}
+
+.icon {
+    width: 40px;
+}
+
+.title {
+    font-family: var(--ff-heading);
+    font-size: 1.8rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
+    color: var(--clr-neutral-heading);
+}
+
+.text {
+    color: var(--clr-neutral-paragraph);
+}
+
+.btn {
+    width: fit-content;
+    background-color: var(--clr-neutral-button);
+    padding: 0.75rem 2rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+}
+
+.btn:active {
+    background-color: transparent;
+    /* create outline instead border */
+    outline: 2px solid var(--clr-neutral-button);
+    outline-offset: -2px;
+}
+
+/* to attach single button color */
+.card:nth-child(1) > .btn {
+    color: var(--clr-secondary-bg);
+}
+.card:nth-child(1) > .btn:active {
+    color: var(--clr-neutral-button);
+}
+.card:nth-child(2) > .btn {
+    color: var(--clr-primary-ltr-bg);
+}
+.card:nth-child(2) > .btn:active {
+    color: var(--clr-neutral-button);
+}
+.card:nth-child(3) > .btn {
+    color: var(--clr-primary-bg);
+}
+.card:nth-child(3) > .btn:active {
+    color: var(--clr-neutral-button);
+}
+
+/* mobile */
+@media screen and (max-width: 375px) {
+    .container {
+        width: 328px;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        margin-block: 4rem;
+    }
+
+    .card-container {
+        max-width: 328px;
+    }
+
+    .card:nth-child(1) {
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .card:nth-child(3) {
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .btn {
+        margin-block: 0;
+    }
 }
