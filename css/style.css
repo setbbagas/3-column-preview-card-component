@@ -1,0 +1,54 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* variables */
+:root {
+    /* font family */
+    --ff-paragraph: "Inter", sans-serif;
+    --ff-heading: "Lexend Deca", sans-serif;
+    /* font weight */
+    --fw-regular: 400;
+    --fw-bold: 700;
+    /* color */
+    --clr-primary-bg: hsl(179, 100%, 13%);
+    --clr-primary-ltr-bg: hsl(184, 100%, 22%);
+    --clr-secondary-bg: hsl(31, 77%, 52%);
+    --clr-neutral-bg: hsl(0, 0%, 95%);
+    --clr-neutral-heading: hsl(0, 0%, 95%);
+    --clr-neutral-button: hsl(0, 0%, 95%);
+    --clr-neutral-paragraph: hsla(0, 0%, 100, 0.75);
+}
+
+/* reset */
+/* box-model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* general styling */
+body {
+    /* layout */
+    min-height: 100vh;
+    /* display */
+    display: grid;
+    place-content: center;
+    /* font */
+    font-family: var(--ff-paragraph);
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-paragraph);
+    /* background */
+    background-color: var(--clr-neutral-bg);
+}
